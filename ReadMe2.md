@@ -13,8 +13,8 @@ which allow us to create, read, and edit excel documents using java.
       notes: remember adding all the jars in the Apache POI folders.
 - Step 2: create a package to store excel documents in your test project and put test data file in this folder
 - Step 3: create a another package named utility in your test project to store common java classes.
-  step 4: create a new class file, add constants, variables and methods to read and edit this excel file which store test datas.
-  step 5: Once we are done with writing Excel functions we can go ahead and use the test data from excel in login action .
+- step 4: create a new class file, add constants, variables and methods to read and edit this excel file which store test datas.
+- step 5: Once we are done with writing Excel functions we can go ahead and use the test data from excel in login action .
   
 
 
