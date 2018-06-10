@@ -1,0 +1,27 @@
+package com.example.trademe.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage extends BasePage{
+	
+	public LoginPage(WebDriver driver) {
+	    super(driver);
+	}
+	public LoginPage loginAsAdmin() {
+	    WebElement open = driver.findElement(By.id("open"));
+	    open.click();
+	 
+	    WebElement username = driver.findElement(By.id("username"));
+	    username.sendKeys("admin");
+	 
+	    WebElement password = driver.findElement(By.id("password"));
+	    password.sendKeys("admin");
+	 
+	    WebElement login = driver.findElement(By.id("login-button"));
+	    login.submit();
+	 
+	    return new LoginPage(driver);
+	  }
+}

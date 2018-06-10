@@ -1,0 +1,19 @@
+package example.trademe.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BasePage {
+	protected WebDriver driver;
+	
+	public BasePage(WebDriver driver) {
+	    this.driver = driver;
+	}
+	
+	public LoginPage navigateTo() {
+		driver = new FirefoxDriver();
+	    driver.navigate().to("https://www.trademe.co.nz/");
+	   
+	    return new LoginPage(driver);
+	}
+}

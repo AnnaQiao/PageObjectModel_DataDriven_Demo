@@ -1,0 +1,51 @@
+package example.trademeSellAndBuy.pageObjects;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class carDetailInsuranceQuotePage {
+	
+	WebDriver driver;
+	public carDetailInsuranceQuotePage(WebDriver driver) {
+		this.driver = driver;
+		
+		// this initElements methods will create all WebElements
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(name="plateno")
+	WebDriver carName;
+	
+	@FindBy(css=".btn.btn-md.btn-primary.btn-block-sm.numPlateSearch")
+	WebDriver searchButtom;
+	
+	@FindBy(css="div[name='addressSearch']")
+	WebDriver addressCar;
+	
+	@FindBy(id="dateofbirth_dd")
+	WebDriver driverBirthDD;
+
+	@FindBy(id="dateofbirth_mm")
+	WebDriver driverBirthMM;
+	
+	@FindBy(id="dateofbirth_yyyy")
+	WebDriver driverBirthYY;
+
+	@FindBy(css="span.ng-invalid")
+	WebDriver gender;
+   
+	WebDriver regularDriver;
+   
+	@FindBy(xpath="//div[2]/div[2]/div[2]/label/span")
+	WebDriver thirdPartyCover;	
+  
+	@FindBy(name="coverAmount")
+	WebDriver carValue;
+
+	@FindBy(css="span.dynamicNext")
+	WebDriver estimateCarInsurance;
+	public void setcar
+
+}

@@ -1,0 +1,62 @@
+package example.trademe.testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import example.trademe.pageObjects.HomePage;
+import example.trademe.pageObjects.LoginPage;
+import example.trademe.pageObjects.NavigationPage;
+
+public class LoginAction {
+	WebDriver driver;
+	LoginPage loginPage;
+	HomePage homepage;
+	NavigationPage nav;
+
+	@BeforeTest
+	public void startUp() {
+		System.setProperty("webdriver.firefox.marionette", "C:/geckodriver.exe");
+		driver = new FirefoxDriver();
+		homepage = new HomePage(driver);
+		loginPage = new LoginPage(driver);
+		loginPage.navigateTo();
+	}
+
+    //@Parameters({"admin","admin"})
+	@Test
+	public void loginAsAdmin() throws Throwable {
+		Thread.sleep(5000);
+//		driver.findElement(By.id("LoginLink")).click();
+//		Thread.sleep(10000);
+//		 driver.findElement(By.id("page_email")).sendKeys("admin@gmail.com");
+//		 driver.findElement(By.id("page_password")).sendKeys("admin@gmail.com");
+//		 driver.findElement(By.id("LoginPageButton")).click();
+		homepage.initPageObjects(); 
+		homepage.getLoginButtonOnHomePage().click();
+		
+		Thread.sleep(10000);
+		loginPage.initPageObjects();
+		loginPage.getEmailAddress().sendKeys("admin");
+		loginPage.getPassword().sendKeys("admin");
+		loginPage.getLoginButtonOnLoginPage().click();
+		
+//		nav = new NavigationPage(driver);
+//		
+//		String actual = nav.currentPageTitel;
+//		System.out.println(actual+"??????????");
+//		Assert.assertEquals(actual, actual);
+		 
+	}
+
+	@AfterTest
+	public void tearDown() {
+		//driver.quit();
+	}
+
+}

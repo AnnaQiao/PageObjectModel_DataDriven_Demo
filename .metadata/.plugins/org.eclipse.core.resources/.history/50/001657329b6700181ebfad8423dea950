@@ -1,0 +1,5 @@
+package example.trademe.pageobjects;
+
+public class NavigationPage {
+
+}

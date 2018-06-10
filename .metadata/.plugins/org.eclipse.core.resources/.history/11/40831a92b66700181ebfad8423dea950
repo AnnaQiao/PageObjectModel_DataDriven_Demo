@@ -1,0 +1,44 @@
+package example.trademe.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import example.trademe.pageObjects.LoginPage;
+import example.trademe.pageObjects.NavigationPage;
+
+public class LoginAction {
+	WebDriver driver;
+	LoginPage loginPage;
+	NavigationPage nav;
+
+	@BeforeTest
+	public void startUp() {
+		driver = new FirefoxDriver();
+		loginPage = new LoginPage(driver);
+		loginPage.navigateTo();
+	}
+
+    //@Parameters({"admin","admin"})
+	@Test
+	public void loginAsAdmin() throws Throwable {
+		loginPage.getUserName().sendKeys("admin");
+		loginPage.getPassword().sendKeys("admin");
+		loginPage.login();
+		open.click();
+		// username.sendKeys("admin");
+		// password.sendKeys("admin");
+		// login.submit();
+		nav = new NavigationPage(driver);
+		nav.checkForNavigationList();
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

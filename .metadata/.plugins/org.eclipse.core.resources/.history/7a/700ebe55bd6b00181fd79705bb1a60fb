@@ -1,0 +1,46 @@
+package example.trademeSellAndBuy.utility;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ExcelUtil extends BaseTest {
+	//Main Directory of the project
+	public static final String currentDir = System.getProperty("user.dir");
+	//Location of Test data excel file
+    public static String testDataExcelPath = null;
+   
+    //Excel WorkBook
+    private static XSSFWorkbook excelWBook;
+ 
+    //Excel Sheet
+    private static XSSFSheet excelWSheet;
+	// row Number
+	public static int rowNumber;
+	// Column Number
+	public static int columnNumber;
+
+	// Setter and Getters of row and columns
+	public static void setColumnNumber(int pColumnNumber) {
+		columnNumber = pColumnNumber;
+	}
+
+	public static int getColumnNumber() {
+
+		return columnNumber;
+	}
+
+	public static void setRowNumber(int pRowNumber) {
+		rowNumber = pRowNumber;
+	}
+
+	public static int getRowNumber() {
+		return rowNumber;
+	}
+   public static void setExcelFileSheet(String sheetName) throws FileNotFoundException {
+	   testDataExcelPath = currentDir+"\\SeleniumeTestNGPOMTrademe\\src\\example\\trademeSellAndBuy\\testData/";
+	   // Open the Excel file
+       FileInputStream ExcelFile = new FileInputStream(testDataExcelPath + testDataExcelFileName);
+       excelWBook = new XSSFWorkbook(ExcelFile);
+       excelWSheet = excelWBook.getSheet(sheetName);
+   }
+}

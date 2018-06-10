@@ -1,0 +1,9 @@
+package example.trademeSellAndBuy.testcases;
+
+import org.testng.annotations.Test;
+
+public class GetInsuranceQuote {
+  @Test
+  public void f() {
+  }
+}

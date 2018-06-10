@@ -1,0 +1,78 @@
+package example.trademeSellAndBuy.pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+
+public class carDetailInsuranceQuotePage extends BasePage {
+	
+	
+	public carDetailInsuranceQuotePage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	@FindBy(name="plateno")
+	WebDriver carName;
+	
+	@FindBy(css=".btn.btn-md.btn-primary.btn-block-sm.numPlateSearch")
+	WebDriver searchButtom;
+	
+	@FindBy(css="div[name='addressSearch']")
+	WebDriver addressCar;
+	
+//	driver.findElement(By.name("plateno")).sendKeys("JTT948");
+	
+//	WebElement searchButtom = driver.findElement(By.cssSelector(".btn.btn-md.btn-primary.btn-block-sm.numPlateSearch"));
+//	
+//	JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+//	jse2.executeScript("arguments[0].scrollIntoView()", searchButtom); 
+//	Actions actions = new Actions(driver);
+//	actions.moveToElement(searchButtom).click().build().perform();
+//	Thread.sleep(5000);
+//	WebElement addressCar = driver.findElement(By.cssSelector("div[name='addressSearch']"));
+//	jse2.executeScript("arguments[0].scrollIntoView()", addressCar); 
+//	addressCar.clear();
+//	addressCar.sendKeys("Flat 1, 38 Latham Avenue, Pakuranga, Auckland 2010");
+
+	@FindBy(id="dateofbirth_dd")
+	WebDriver driverBirthDD;
+//	WebElement birth = driver.findElement(By.id("dateofbirth_dd"));
+//	jse2.executeScript("arguments[0].scrollIntoView()", birth); 
+//	birth.sendKeys("10");
+	@FindBy(id="dateofbirth_mm")
+	WebDriver driverBirthMM;
+//	WebElement month = driver.findElement(By.id("dateofbirth_mm"));
+//	month.sendKeys("07");
+	@FindBy(id="dateofbirth_yyyy")
+	WebDriver driverBirthYY;
+//	WebElement year =  driver.findElement(By.id("dateofbirth_yyyy"));
+//    year.sendKeys("1985");
+	@FindBy(css="span.ng-invalid")
+	WebDriver gender;
+   // driver.findElement(By.cssSelector ("span.ng-invalid")).click();
+	@FindBy(xpath="//div[2]/label[2]/span")
+	WebDriver regularDriver;
+   // WebElement regularDriver = driver.findElement(By.xpath ("//div[2]/label[2]/span"));
+   // jse2.executeScript("arguments[0].scrollIntoView()", regularDriver); 
+   // regularDriver.click();
+	@FindBy(xpath="//div[2]/div[2]/div[2]/label/span")
+	WebDriver thirdPartyCover;	
+   // WebElement thirdPartyCover = driver.findElement(By.xpath ("//div[2]/div[2]/div[2]/label/span"));
+   // jse2.executeScript("arguments[0].scrollIntoView()", thirdPartyCover); 
+    //thirdPartyCover.click();
+	@FindBy(name="coverAmount")
+	WebDriver carValue;
+//    WebElement carValue = driver.findElement(By.name("coverAmount"));
+//    carValue.clear();
+//    carValue.sendKeys("5200");
+	@FindBy(css="span.dynamicNext")
+	WebDriver estimateCarInsurance;
+//    WebElement estimateCarInsurance = driver.findElement(By.cssSelector("span.dynamicNext"));
+//    jse2.executeScript("arguments[0].scrollIntoView()", estimateCarInsurance); 
+//    estimateCarInsurance.click();
+
+}

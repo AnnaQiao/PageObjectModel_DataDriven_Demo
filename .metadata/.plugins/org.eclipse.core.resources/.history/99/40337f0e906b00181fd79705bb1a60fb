@@ -1,0 +1,36 @@
+package example.trademeSellAndBuy.testcases;
+
+import org.testng.annotations.Test;
+
+import example.trademeSellAndBuy.pageObjects.CarDetailInsuranceQuotePage;
+import example.trademeSellAndBuy.pageObjects.InsuranceHomePage;
+
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+
+public class GotInsuranceQuote {
+	WebDriver driver;
+	InsuranceHomePage insuranceHomepage;
+	CarDetailInsuranceQuotePage carInsuranceQuote;
+ 
+  @BeforeTest
+  public void beforeTest() {
+	  System.setProperty("webdriver.firefox.marionette", "C:/geckodriver.exe");
+	  driver = new FirefoxDriver();
+	  driver.navigate().to("https://www.trademeinsurance.co.nz/?utm_source=holidayhouses&utm_medium=navbar&utm_campaign=navbar");
+	  insuranceHomepage = new InsuranceHomePage(driver);
+	  carInsuranceQuote = new CarDetailInsuranceQuotePage(driver);
+	  
+  }
+  @Test
+  public void getCarInsuranceQuote() {
+	  
+	  insuranceHomepage.selectCarInsuranceQuote();
+  }
+  @AfterTest
+  public void afterTest() {
+  }
+
+}

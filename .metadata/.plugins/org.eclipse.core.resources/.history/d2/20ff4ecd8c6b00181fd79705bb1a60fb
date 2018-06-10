@@ -1,0 +1,28 @@
+package example.trademeSellAndBuy.testcases;
+
+import org.testng.annotations.Test;
+
+import example.trademeSellAndBuy.pageObjects.CarDetailInsuranceQuotePage;
+import example.trademeSellAndBuy.pageObjects.InsuranceHomePage;
+
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+
+public class GotInsuranceQuote {
+	WebDriver driver;
+	InsuranceHomePage insuranceHomepage;
+	CarDetailInsuranceQuotePage carInsuranceQuote;
+  @Test
+  public void getCarInsuranceQuote() {
+	  
+  }
+  @BeforeTest
+  public void beforeTest() {
+  }
+
+  @AfterTest
+  public void afterTest() {
+  }
+
+}

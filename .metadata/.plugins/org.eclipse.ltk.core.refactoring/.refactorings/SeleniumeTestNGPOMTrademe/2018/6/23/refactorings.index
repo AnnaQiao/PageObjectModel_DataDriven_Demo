@@ -1,0 +1,27 @@
+1528072096269	Delete element
+1528072326931	Rename package 'Pages'
+1528073055807	Rename resource 'Loginpage.java'
+1528074167542	Rename resource 'pages'
+1528074284102	Rename resource 'loginPages'
+1528075285130	Rename resource 'testng'
+1528075401651	Rename resource 'AA insurance'
+1528075518098	Rename resource 'suites'
+1528075883196	Rename resource 'pages'
+1528078240786	Rename resource 'LoginStep.java'
+1528078260728	Rename resource 'pageobjects'
+1528080190445	Rename field 'login'
+1528080654791	Rename method 'loginAsAdmin'
+1528081007411	Encapsulate field 'password'
+1528081013610	Encapsulate field 'userName'
+1528088830748	Encapsulate field 'loginButtonOnHomePage'
+1528088840420	Encapsulate field 'emailAddress'
+1528088871313	Encapsulate field 'loginButtonOnLoginPage'
+1528096673854	Rename field 'currentPageTitel'
+1528190549912	Rename resource 'trademe'
+1528191616142	Rename resource 'NewTest.java'
+1528452008822	Delete element
+1528452114559	Move compilation unit
+1528452443576	Rename type 'insuranceHomePage'
+1528452513524	Rename type 'carDetailInsuranceQuotePage'
+1528529543342	Rename type 'excelutil'
+1528538888596	Delete element

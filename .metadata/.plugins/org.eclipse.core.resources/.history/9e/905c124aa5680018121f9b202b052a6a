@@ -1,0 +1,12 @@
+package example.trademeSellAndBuy.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class insuranceHomePage extends BasePage {
+
+	public insuranceHomePage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+}

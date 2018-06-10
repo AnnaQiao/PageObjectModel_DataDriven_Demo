@@ -1,0 +1,29 @@
+package example.trademeSellAndBuy.testcases;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+
+public class carInsurance {
+	WebDriver driver;
+	@Test
+	public void setUp() {
+		driver.findElement(By.cssSelector("a.button.yellow")).click();
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+		System.setProperty("webdriver.firefox.marionette", "C:/geckodriver.exe");
+		driver = new FirefoxDriver();
+		 driver.navigate().to("https://www.trademe.co.nz/");
+	}
+	
+
+	@AfterTest
+	public void tearDown() {
+	}
+
+}

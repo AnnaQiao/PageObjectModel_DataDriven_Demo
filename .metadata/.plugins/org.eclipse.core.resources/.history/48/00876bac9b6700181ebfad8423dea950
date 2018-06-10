@@ -1,0 +1,12 @@
+package example.trademe.pageobjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class NavigationPage  extends BasePage {
+
+	public NavigationPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+}

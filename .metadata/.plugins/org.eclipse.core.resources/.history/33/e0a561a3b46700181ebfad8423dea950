@@ -1,0 +1,44 @@
+package example.trademe.pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage extends BasePage {
+	@SuppressWarnings("unused")
+	private WebElement url;
+	private WebElement userName;
+	private WebElement password;
+	private WebElement open;
+	
+	public WebElement loginButton;
+	private final By openSelector = By.id("open");
+	private final By usernameSelector = By.id("username");
+	private final By passwordSelector = By.id("password");
+	private final By loginSelector = By.id("login-button");
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
+
+	public LoginPage login() {
+		this.open = driver.findElement(openSelector);
+		this.userName =(driver.findElement(usernameSelector));
+		WebElement password = driver.findElement(passwordSelector);
+		WebElement login = driver.findElement(loginSelector);
+		// open.click();
+		// username.sendKeys("admin");
+		// password.sendKeys("admin");
+		// login.submit();
+		return new LoginPage(driver);
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+
+	public WebElement getUserName() {
+		return userName;
+	}
+
+}

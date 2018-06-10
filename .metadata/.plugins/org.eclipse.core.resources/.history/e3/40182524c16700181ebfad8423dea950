@@ -1,0 +1,48 @@
+package example.trademe.pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage extends BasePage {
+
+	private WebElement loginButtonOnHomePage;
+	private WebElement emailAddress;
+	private WebElement password;
+	private WebElement loginButtonOnLoginPage;
+
+	private final By loginPageSelector = By.id("LoginLink");
+	private final By emailAddressSelector = By.id("page_email");
+	private final By passwordSelector = By.id("page_password");
+	private final By loginButtonSelector = By.id("LoginPageButton");
+
+	//Constructor
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
+
+	public void initPageObjects() throws InterruptedException {
+		this.loginButtonOnHomePage = driver.findElement(loginPageSelector);
+		Thread.sleep(10000);
+		this.emailAddress = driver.findElement(emailAddressSelector);
+		this.password = driver.findElement(passwordSelector);
+		this.loginButtonOnLoginPage = driver.findElement(loginButtonSelector);
+	}
+
+	public WebElement getLoginButtonOnHomePage() {
+		return loginButtonOnHomePage;
+	}
+
+	public WebElement getEmailAddress() {
+		return emailAddress;
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+
+	public WebElement getLoginButtonOnLoginPage() {
+		return loginButtonOnLoginPage;
+	}
+
+}

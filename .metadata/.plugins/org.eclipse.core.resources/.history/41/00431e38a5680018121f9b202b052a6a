@@ -1,0 +1,5 @@
+package example.trademeSellAndBuy.pageObjects;
+
+public class insuranceHomePage {
+
+}

@@ -1,0 +1,22 @@
+package example.trademe.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class NavigationPage extends BasePage {
+    public String currentPageTitel;
+	public NavigationPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+   public NavigationPage checkForPageTitel() {
+	   
+        currentPageTitel = driver.getTitle(); 
+		return new NavigationPage(driver);
+
+	}
+	public NavigationPage checkForNavigationList() {
+        
+		return new NavigationPage(driver);
+
+	}
+}

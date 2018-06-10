@@ -1,0 +1,40 @@
+package example.trademeSellAndBuy.testcases;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
+
+public class carInsurance {
+	WebDriver driver;
+	@Test
+	public void setUp() throws InterruptedException {
+		driver.findElement(By.cssSelector("a.button.yellow")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.name("plateno")).sendKeys("JTT948");
+		//WebElement searchButtom = driver.findElement(By.xpath("//div[1]/div[2]/button"));
+		WebElement searchButtom = driver.findElement(By.cssSelector(".btn.btn-md.btn-primary.btn-block-sm.numPlateSearch"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(searchButtom).click().build().perform();
+		WebElement addressCar = driver.findElement(By.cssSelector("div[name='addressSearch']"));
+				addressCar.sendKeys("38 Latham Avenue, Pakuranga, Auckland 2010");
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+		System.setProperty("webdriver.firefox.marionette", "C:/geckodriver.exe");
+		driver = new FirefoxDriver();
+		 driver.navigate().to("https://www.trademeinsurance.co.nz/?utm_source=holidayhouses&utm_medium=navbar&utm_campaign=navbar");
+	}
+	
+
+	@AfterTest
+	public void tearDown() {
+		driver.close();
+	}
+
+}

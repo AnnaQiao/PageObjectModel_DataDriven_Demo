@@ -1,0 +1,5 @@
+package com.example.testng.pages;
+
+public class Loginpage {
+
+}

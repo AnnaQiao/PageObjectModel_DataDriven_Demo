@@ -1,0 +1,21 @@
+package example.trademeSellAndBuy.pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
+
+public class carDetailInsuranceQuotePage extends BasePage {
+	
+	
+	public carDetailInsuranceQuotePage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	@FindBy(name="plateno")
+	WebDriver carName;
+	
+	@FindBy(css="div[name=\"addressSearch\"]")
+	WebDriver address;
+	
+
+}
