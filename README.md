@@ -14,14 +14,14 @@ code within page objects (only at one place)
  Here in Basepage which will have some basic option, like navigating the webside and create webdriver object. the other class can extend this 
  BasePage class.
  ## Example: let me show a simple login example
- - BasePage of POM
- 
-![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/BasePage.JPG) 
  - HomePage of POM
 ![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/HomePage.JPG) 
  - LoginPage of POM
 ![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/LoginPage1.JPG) 
 ![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/LoginPage2.JPG) 
+ - login action of test cases
+![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/LoginPage1.JPG) 
+![](https://github.com/AnnaQiao/PageObjectModel_DataDriven_Demo/blob/master/SeleniumeTestNGPOMTrademe/src/example/trademeSellAndBuy/pictures/LoginPage2) 
 
 - In above test, we separate the test code and test locators, in this case, in future if the UI changes, we only will modify the methods which we defined in mutiple pages.
 
